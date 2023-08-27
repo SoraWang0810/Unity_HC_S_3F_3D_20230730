@@ -1,9 +1,19 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Enemy enemy;
+
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        print("¸I¨ìªºª«¥ó¡G" + hit.gameObject);
+        if (hit.gameObject.name.Contains("ç“¶å­"))
+        {
+            enemy.enabled = true;
+        }
+
+        if (hit.gameObject.name.Contains("MND"))
+        {
+            print("å¤±æ•—!!");
+        }
     }
 }
